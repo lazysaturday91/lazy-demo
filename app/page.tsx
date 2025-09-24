@@ -56,6 +56,16 @@ export default function Home() {
       {/* Floating Particles */}
       <div className="particles"></div>
       
+      {/* Neon Gradient Lines */}
+      <div className="neon-lines">
+        <div className="neon-line neon-line-1"></div>
+        <div className="neon-line neon-line-2"></div>
+        <div className="neon-line neon-line-3"></div>
+        <div className="neon-line neon-line-4"></div>
+        <div className="neon-line neon-line-5"></div>
+        <div className="neon-line neon-line-6"></div>
+      </div>
+      
       {/* Click Particles */}
       {particles.map(particle => (
         <div

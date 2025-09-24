@@ -199,6 +199,187 @@ body {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* Neon Gradient Lines */
+.neon-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.neon-line {
+  position: absolute;
+  opacity: 0.6;
+  filter: blur(0.5px);
+}
+
+/* Line 1 - Horizontal flowing */
+.neon-line-1 {
+  width: 200%;
+  height: 2px;
+  top: 20%;
+  left: -100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #00ffff 20%, 
+    #0099ff 40%, 
+    #9933ff 60%, 
+    #ff00ff 80%, 
+    transparent 100%);
+  animation: flow-horizontal-1 8s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+@keyframes flow-horizontal-1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+/* Line 2 - Diagonal flowing */
+.neon-line-2 {
+  width: 300%;
+  height: 1px;
+  top: 60%;
+  left: -150%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #ff00ff 25%, 
+    #00ffff 50%, 
+    #0099ff 75%, 
+    transparent 100%);
+  animation: flow-diagonal 12s linear infinite;
+  transform-origin: center;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.4);
+}
+
+@keyframes flow-diagonal {
+  0% { transform: rotate(-15deg) translateX(-50%); }
+  100% { transform: rotate(-15deg) translateX(50%); }
+}
+
+/* Line 3 - Vertical flowing */
+.neon-line-3 {
+  width: 1px;
+  height: 200%;
+  top: -100%;
+  left: 75%;
+  background: linear-gradient(0deg, 
+    transparent 0%, 
+    #9933ff 20%, 
+    #00ffff 40%, 
+    #0099ff 60%, 
+    #ff00ff 80%, 
+    transparent 100%);
+  animation: flow-vertical 10s linear infinite;
+  box-shadow: 0 0 6px rgba(153, 51, 255, 0.5);
+}
+
+@keyframes flow-vertical {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+/* Line 4 - Reverse horizontal */
+.neon-line-4 {
+  width: 250%;
+  height: 1px;
+  top: 80%;
+  right: -125%;
+  background: linear-gradient(270deg, 
+    transparent 0%, 
+    #0099ff 30%, 
+    #00ffff 60%, 
+    #9933ff 90%, 
+    transparent 100%);
+  animation: flow-horizontal-reverse 15s linear infinite;
+  box-shadow: 0 0 12px rgba(0, 153, 255, 0.4);
+}
+
+@keyframes flow-horizontal-reverse {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Line 5 - Curved diagonal */
+.neon-line-5 {
+  width: 280%;
+  height: 2px;
+  top: 35%;
+  left: -140%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #ff00ff 15%, 
+    #9933ff 35%, 
+    #00ffff 55%, 
+    #0099ff 75%, 
+    #ff00ff 90%, 
+    transparent 100%);
+  animation: flow-curve 18s linear infinite;
+  transform: rotate(25deg);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+}
+
+@keyframes flow-curve {
+  0% { transform: rotate(25deg) translateX(-30%); }
+  50% { transform: rotate(20deg) translateX(30%); }
+  100% { transform: rotate(25deg) translateX(90%); }
+}
+
+/* Line 6 - Slow vertical reverse */
+.neon-line-6 {
+  width: 1px;
+  height: 180%;
+  bottom: -90%;
+  left: 25%;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    #00ffff 25%, 
+    #ff00ff 50%, 
+    #9933ff 75%, 
+    transparent 100%);
+  animation: flow-vertical-reverse 20s linear infinite;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+@keyframes flow-vertical-reverse {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+/* Additional flowing effects for more complexity */
+.neon-line-1::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.8), transparent);
+  animation: line-glow-1 3s ease-in-out infinite;
+}
+
+@keyframes line-glow-1 {
+  0%, 100% { transform: translateX(-100px); opacity: 0; }
+  50% { transform: translateX(calc(100vw + 100px)); opacity: 1; }
+}
+
+.neon-line-3::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(0deg, transparent, rgba(153, 51, 255, 0.6), transparent);
+  animation: line-glow-3 4s ease-in-out infinite 1s;
+}
+
+@keyframes line-glow-3 {
+  0%, 100% { transform: translateY(-80px); opacity: 0; }
+  50% { transform: translateY(calc(100vh + 80px)); opacity: 1; }
+}
+
 /* Click Particles */
 .click-particle {
   position: absolute;
