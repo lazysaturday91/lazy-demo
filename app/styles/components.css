@@ -298,7 +298,7 @@
   inset: -50%;
   background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transform: rotate(45deg);
-  animation: shimmer 3s linear infinite;
+  animation: shimmer 9s linear infinite;
 }
 
 .philosophy-block:hover .philosophy-number {

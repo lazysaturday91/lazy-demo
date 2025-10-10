@@ -1,6 +1,6 @@
 /**
  * Manifesto Section Component
- * Brand identity manifesto with stunning glass effects
+ * Personal story and vision for all developers
  */
 
 import { MANIFESTO } from '../constants/brand';
@@ -26,46 +26,72 @@ export function ManifestoSection() {
           </div>
 
           {/* Main Quote */}
-          <div className="space-y-8 mb-16">
+          <div className="space-y-10 mb-16">
             <p className="text-2xl md:text-3xl lg:text-4xl leading-relaxed font-medium text-center">
               <span className="bg-gradient-to-r from-[#00c896] via-[#00ffb3] to-[#06b6d4] bg-clip-text text-transparent">
                 {MANIFESTO.quote}
               </span>
             </p>
 
-            {/* Content Lines */}
-            {MANIFESTO.content.map((line, index) => (
-              <p
-                key={index}
-                className="text-xl md:text-2xl leading-relaxed text-white/90 text-center"
-                style={{
-                  animation: `fade-in-up 0.8s ease-out ${index * 0.2 + 0.3}s backwards`
-                }}
-              >
-                {line}
-              </p>
-            ))}
+            {/* Personal Story */}
+            <div className="space-y-6 max-w-4xl mx-auto">
+              {MANIFESTO.content.map((line, index) => (
+                <p
+                  key={index}
+                  className="text-xl md:text-2xl leading-relaxed text-white/80 text-center"
+                  style={{
+                    animation: `fade-in-up 0.8s ease-out ${index * 0.2 + 0.3}s backwards`
+                  }}
+                >
+                  {line}
+                </p>
+              ))}
+            </div>
 
-            {/* Final Statement */}
-            <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed font-semibold text-center pt-8">
-              <span className="text-white">그게 나의 </span>
-              <span
-                className="bg-gradient-to-r from-[#00c896] via-[#00ffb3] to-[#06b6d4] bg-clip-text text-transparent animate-gradient-shift"
-                style={{
-                  filter: 'drop-shadow(0 0 20px rgba(0, 200, 150, 0.5))'
-                }}
-              >
-                LazySaturday
-              </span>
-              <span className="text-white">다.</span>
-            </p>
+            {/* Divider */}
+            <div className="flex items-center justify-center gap-4 py-8">
+              <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#00c896] to-transparent"></div>
+              <div className="flex gap-2">
+                <div className="w-2 h-2 rounded-full bg-[#00c896] animate-pulse"></div>
+                <div className="w-2 h-2 rounded-full bg-[#6366f1] animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                <div className="w-2 h-2 rounded-full bg-[#8b5cf6] animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+              </div>
+              <div className="w-20 h-px bg-gradient-to-l from-transparent via-[#00c896] to-transparent"></div>
+            </div>
+
+            {/* Vision */}
+            <div className="space-y-6 max-w-4xl mx-auto">
+              {MANIFESTO.vision.map((line, index) => (
+                <p
+                  key={index}
+                  className="text-xl md:text-2xl leading-relaxed text-[#00ffb3] font-medium text-center"
+                  style={{
+                    animation: `fade-in-up 0.8s ease-out ${index * 0.2 + 1}s backwards`
+                  }}
+                >
+                  {line}
+                </p>
+              ))}
+            </div>
           </div>
 
           {/* Closing Statement */}
           <div className="relative pt-12 border-t border-white/10">
-            <p className="text-lg md:text-xl leading-relaxed text-[#cbd5e1] text-center max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed text-[#cbd5e1] text-center max-w-4xl mx-auto mb-12">
               {MANIFESTO.closing}
             </p>
+
+            {/* Call to Action */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#00c896] to-[#06b6d4] text-white font-semibold text-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer flex items-center gap-2">
+                <span>🚀</span>
+                <span>함께 시작하기</span>
+              </div>
+              <div className="px-8 py-4 rounded-xl border-2 border-[#00c896] text-[#00c896] font-semibold text-lg hover:bg-[#00c896]/10 transition-all duration-300 cursor-pointer flex items-center gap-2">
+                <span>📖</span>
+                <span>스토리 읽기</span>
+              </div>
+            </div>
 
             {/* Decorative Dots */}
             <div className="mt-12 flex items-center justify-center gap-3">
