@@ -1,0 +1,519 @@
+/**
+ * Modern Component Styles
+ * Glass morphism, gradients, and advanced effects
+ */
+
+/* ============================================
+   Glass Cards
+   ============================================ */
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur-lg);
+  -webkit-backdrop-filter: var(--blur-lg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.glass-card:hover {
+  background: var(--glass-strong);
+  border-color: rgba(0, 200, 150, 0.3);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.glass-card-strong {
+  background: var(--glass-strong);
+  backdrop-filter: var(--blur-xl);
+  -webkit-backdrop-filter: var(--blur-xl);
+}
+
+/* ============================================
+   Gradient Cards
+   ============================================ */
+
+.gradient-card {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-xl);
+  padding: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.gradient-card-inner {
+  background: var(--midnight-dark);
+  border-radius: calc(var(--radius-xl) - 2px);
+  padding: var(--space-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.gradient-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.gradient-card:hover::before {
+  opacity: 0.2;
+}
+
+/* ============================================
+   Enhanced Cards & Panels
+   ============================================ */
+
+.brand-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 200, 150, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.brand-card:hover::after {
+  left: 100%;
+}
+
+.brand-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  background: var(--glass-strong);
+}
+
+.manifesto-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur-xl);
+  -webkit-backdrop-filter: var(--blur-xl);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.manifesto-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-accent);
+  animation: shimmer 3s linear infinite;
+}
+
+.manifesto-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-mesh);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* ============================================
+   Modern Buttons
+   ============================================ */
+
+.brand-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 16px 32px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.brand-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.brand-button:hover::before {
+  transform: translateX(100%);
+}
+
+.brand-button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.brand-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.brand-button-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.brand-button-outline:hover {
+  background: var(--accent);
+  color: var(--midnight-dark);
+  box-shadow: var(--shadow-glow);
+}
+
+.brand-button-glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
+  border: 1px solid var(--glass-border);
+  color: var(--white);
+}
+
+/* ============================================
+   Philosophy Blocks - Enhanced
+   ============================================ */
+
+.philosophy-block {
+  position: relative;
+  padding: var(--space-lg);
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-slow);
+  overflow: hidden;
+}
+
+.philosophy-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 200, 150, 0.1), transparent);
+  transition: left var(--transition-slow);
+}
+
+.philosophy-block:hover::before {
+  left: 100%;
+}
+
+.philosophy-block::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  background: radial-gradient(circle at center, rgba(0, 200, 150, 0.15), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.philosophy-block:hover::after {
+  opacity: 1;
+}
+
+.philosophy-block:hover {
+  background: var(--glass-strong);
+  border-left-width: 6px;
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+}
+
+.philosophy-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  transition: all var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.philosophy-number::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  animation: shimmer 3s linear infinite;
+}
+
+.philosophy-block:hover .philosophy-number {
+  transform: rotate(360deg) scale(1.15);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ============================================
+   Tags - Enhanced
+   ============================================ */
+
+.brand-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur-sm);
+  -webkit-backdrop-filter: var(--blur-sm);
+  border: 1px solid var(--glass-border);
+  color: var(--accent);
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-tag::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient-accent);
+  transform: scaleY(0);
+  transition: transform var(--transition-base);
+}
+
+.brand-tag:hover::before {
+  transform: scaleY(1);
+}
+
+.brand-tag:hover {
+  background: var(--glass-strong);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+  padding-left: 20px;
+}
+
+/* ============================================
+   Stats - Enhanced
+   ============================================ */
+
+.stat-number {
+  font-family: var(--font-headline);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+}
+
+.stat-number::after {
+  content: attr(data-value);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: blur(20px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-xs);
+  color: var(--light-gray);
+}
+
+/* ============================================
+   Loop Indicator - Enhanced
+   ============================================ */
+
+.loop-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--midnight-dark), var(--midnight-dark)) padding-box,
+              var(--gradient-primary) border-box;
+  border-radius: var(--radius-full);
+  position: relative;
+  animation: rotate-loop 15s linear infinite;
+}
+
+.loop-indicator::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-glow);
+}
+
+.loop-indicator::after {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  opacity: 0.2;
+  filter: blur(20px);
+  z-index: -1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   Hover Effects - Enhanced
+   ============================================ */
+
+.hover-lift {
+  transition: all var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  filter: brightness(1.1);
+}
+
+.hover-accent {
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.hover-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-accent);
+  transition: width var(--transition-base);
+}
+
+.hover-accent:hover {
+  color: var(--accent);
+}
+
+.hover-accent:hover::after {
+  width: 100%;
+}
+
+.hover-glow {
+  transition: all var(--transition-base);
+}
+
+.hover-glow:hover {
+  filter: drop-shadow(0 0 20px rgba(0, 200, 150, 0.6));
+}
+
+/* ============================================
+   Scroll Reveal Elements
+   ============================================ */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 768px) {
+  .glass-card,
+  .brand-card {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .manifesto-card {
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+  }
+
+  .philosophy-block {
+    padding: var(--space-md);
+  }
+
+  .brand-button {
+    padding: 12px 24px;
+  }
+}
