@@ -1,10 +1,10 @@
 /**
- * Animation System
- * Routine-themed animations for LazySaturday brand
+ * Advanced Animation System
+ * Modern UI animations with smooth transitions
  */
 
 /* ============================================
-   Core Animations
+   Core Entrance Animations
    ============================================ */
 
 @keyframes fade-in-up {
@@ -18,12 +18,263 @@
   }
 }
 
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================
+   Gradient Animations
+   ============================================ */
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* ============================================
+   Morphing Blob Animations
+   ============================================ */
+
+@keyframes blob-morph-1 {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: translate(20px, -20px) scale(1.05);
+  }
+  50% {
+    border-radius: 50% 50% 40% 60% / 40% 70% 60% 50%;
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  75% {
+    border-radius: 70% 30% 50% 50% / 30% 50% 70% 50%;
+    transform: translate(10px, 10px) scale(1.02);
+  }
+}
+
+@keyframes blob-morph-2 {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    border-radius: 70% 30% 50% 50% / 60% 40% 50% 60%;
+    transform: translate(-15px, 15px) rotate(120deg);
+  }
+  66% {
+    border-radius: 50% 50% 30% 70% / 50% 70% 40% 60%;
+    transform: translate(15px, -15px) rotate(240deg);
+  }
+}
+
+@keyframes blob-morph-3 {
+  0%, 100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    transform: scale(1.1) rotate(180deg);
+  }
+}
+
+/* ============================================
+   Particle Animations
+   ============================================ */
+
+@keyframes particle-float {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(1);
+  }
+}
+
+@keyframes particle-drift-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, -100px);
+  }
+  50% {
+    transform: translate(200px, -50px);
+  }
+  75% {
+    transform: translate(150px, -150px);
+  }
+  100% {
+    transform: translate(0, -200px);
+  }
+}
+
+@keyframes particle-drift-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-80px, -120px);
+  }
+  50% {
+    transform: translate(-150px, -80px);
+  }
+  75% {
+    transform: translate(-100px, -180px);
+  }
+  100% {
+    transform: translate(0, -250px);
+  }
+}
+
+/* ============================================
+   Glow & Pulse Effects
+   ============================================ */
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 200, 150, 0.3),
+                0 0 40px rgba(0, 200, 150, 0.2),
+                0 0 60px rgba(0, 200, 150, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 200, 150, 0.5),
+                0 0 60px rgba(0, 200, 150, 0.3),
+                0 0 90px rgba(0, 200, 150, 0.2);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   Mesh Gradient Animation
+   ============================================ */
+
+@keyframes mesh-move {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-30px, 30px) rotate(240deg);
+  }
+}
+
+/* ============================================
+   Shimmer Effect
+   ============================================ */
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ============================================
+   3D Rotation
+   ============================================ */
+
+@keyframes rotate-3d {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes float-3d {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateX(10deg);
+  }
+}
+
+/* ============================================
+   Wave Animation
+   ============================================ */
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-25%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ============================================
+   Existing Animations (Enhanced)
+   ============================================ */
+
 @keyframes logo-breathe {
   0%, 100% {
     opacity: 1;
+    transform: scale(1);
   }
   50% {
     opacity: 0.9;
+    transform: scale(1.02);
   }
 }
 
@@ -32,63 +283,25 @@
   51%, 100% { opacity: 0; }
 }
 
-/* ============================================
-   Grid & Background Animations
-   ============================================ */
-
 @keyframes grid-breathe {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
 }
 
 @keyframes pulse-expand {
   0% {
     opacity: 0;
-    transform: scale(0.3);
-  }
-  20% {
-    opacity: 0.15;
+    transform: scale(0.5);
   }
   50% {
-    opacity: 0.08;
+    opacity: 0.15;
     transform: scale(1);
-  }
-  80% {
-    opacity: 0.03;
   }
   100% {
     opacity: 0;
-    transform: scale(1.5);
+    transform: scale(2);
   }
 }
-
-/* ============================================
-   Loop Line Animations
-   ============================================ */
-
-@keyframes loop-flow-h {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(100vw + 300px)); }
-}
-
-@keyframes loop-flow-h-reverse {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-100vw - 200px)); }
-}
-
-@keyframes loop-flow-v {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(calc(100vh + 200px)); }
-}
-
-@keyframes loop-flow-v-reverse {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(calc(-100vh - 150px)); }
-}
-
-/* ============================================
-   Floating Dots Animation
-   ============================================ */
 
 @keyframes float-gentle {
   0%, 100% {
@@ -96,20 +309,16 @@
     transform: translate(0, 0) scale(0.8);
   }
   10% {
-    opacity: 0.4;
+    opacity: 0.6;
   }
   50% {
-    opacity: 0.6;
+    opacity: 1;
     transform: translate(20px, -30px) scale(1.2);
   }
   90% {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 }
-
-/* ============================================
-   Rotation Animation
-   ============================================ */
 
 @keyframes rotate-loop {
   0% { transform: rotate(0deg); }
@@ -117,21 +326,48 @@
 }
 
 /* ============================================
-   Animation Utility Classes
+   Utility Classes
    ============================================ */
 
 .animate-fade-in-up {
   animation: fade-in-up 1s ease-out;
 }
 
-.animate-logo-breathe {
-  animation: logo-breathe 4s ease-in-out infinite;
+.animate-fade-in-scale {
+  animation: fade-in-scale 0.8s ease-out;
 }
 
-.animate-blink {
-  animation: blink 1s infinite;
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
 }
 
-.animate-rotate-loop {
-  animation: rotate-loop 10s linear infinite;
+.animate-blob-morph {
+  animation: blob-morph-1 20s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-float-3d {
+  animation: float-3d 6s ease-in-out infinite;
+}
+
+/* ============================================
+   Performance Optimizations
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
