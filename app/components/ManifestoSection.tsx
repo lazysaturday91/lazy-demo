@@ -85,11 +85,11 @@ export function ManifestoSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <div className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#00c896] to-[#06b6d4] text-white font-semibold text-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer flex items-center gap-2">
                 <span>🚀</span>
-                <span>함께 시작하기</span>
+                <span>플랫폼 시작하기</span>
               </div>
               <div className="px-8 py-4 rounded-xl border-2 border-[#00c896] text-[#00c896] font-semibold text-lg hover:bg-[#00c896]/10 transition-all duration-300 cursor-pointer flex items-center gap-2">
-                <span>📖</span>
-                <span>스토리 읽기</span>
+                <span>💼</span>
+                <span>비즈니스 모델 보기</span>
               </div>
             </div>
 

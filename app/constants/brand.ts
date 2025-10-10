@@ -6,9 +6,9 @@
 export const BRAND = {
   name: 'LazySaturday',
   tagline: 'Make small. Ship fast. Live slow.',
-  description: 'AI로 자동화하는 개발자의 주말',
-  mission: '개발자 모두가 주말을 온전히 즐길 수 있도록',
-  keywords: ['AI', '자동화', '생산성', '개발자도구', '주말', 'BuildOnce', 'EarnForever'],
+  description: '아이디어를 빠르게 실현하는 개발 플랫폼',
+  mission: '작게 만들고, 빠르게 출시하고, 여유롭게 살아가다',
+  keywords: ['AI', 'MVP', '빠른개발', '자동화', '개발자', 'BuildOnce', 'EarnForever'],
 } as const;
 
 export const COLORS = {
@@ -37,28 +37,28 @@ export const FONTS = {
 
 export const VISION = {
   title: 'Our Vision',
-  subtitle: 'AI 기반 자동화로 개발자의 시간을 되찾다',
-  description: '나 혼자만의 자유가 아닌, 모든 개발자가 주말을 즐길 수 있는 세상을 만듭니다.',
+  subtitle: '더 빠르게 만들고, 더 여유롭게 살다',
+  description: '아이디어를 빠르게 실제 서비스로 만들고, 지속 가능하게 운영하는 플랫폼.',
   points: [
     {
-      icon: '🤖',
-      title: 'AI-Powered Automation',
-      description: 'AI를 활용한 지능형 자동화 도구로 반복 작업을 제거합니다.',
-    },
-    {
-      icon: '⚡',
-      title: 'Developer Productivity',
-      description: '개발자의 생산성을 극대화하는 실용적인 서비스를 만듭니다.',
-    },
-    {
-      icon: '🌍',
-      title: 'For All Developers',
-      description: '나만의 도구에서 시작해, 모든 개발자를 위한 플랫폼으로 성장합니다.',
+      icon: '🚀',
+      title: 'Fast Execution',
+      description: 'AI와 자동화를 활용해 아이디어를 빠르게 실제 서비스로 구현합니다.',
     },
     {
       icon: '🎯',
-      title: 'Weekend Freedom',
-      description: '주말엔 코드 대신 삶을 즐기는 개발자 문화를 만듭니다.',
+      title: 'Build to Last',
+      description: '처음부터 지속 가능한 서비스를 목표로 설계하고 개발합니다.',
+    },
+    {
+      icon: '📈',
+      title: 'Smart Scaling',
+      description: '작게 시작해 빠르게 검증하고, 가치 있는 서비스는 자연스럽게 성장합니다.',
+    },
+    {
+      icon: '⚡',
+      title: 'Build Once, Run Forever',
+      description: '한 번 잘 만들면 자동으로 운영되는 시스템을 추구합니다.',
     },
   ],
 } as const;
@@ -66,40 +66,40 @@ export const VISION = {
 export const PHILOSOPHY = [
   {
     number: '01',
-    title: 'AI as Your Assistant',
-    description: 'AI는 단순한 도구가 아닌, 당신의 24시간 개발 파트너입니다.',
+    title: 'Ship Fast, Learn Faster',
+    description: '완벽함보다 실행. 빠르게 만들어 실제 반응을 확인하고 개선합니다.',
   },
   {
     number: '02',
-    title: 'Build for Yourself First',
-    description: '내가 필요한 것을 먼저 만들어라. 진짜 문제는 거기서 시작됩니다.',
+    title: 'Build for Real Use',
+    description: '내가 정말 필요한 것을 만듭니다. 진짜 문제를 해결하는 서비스는 자연스럽게 가치를 만듭니다.',
   },
   {
     number: '03',
-    title: 'Share to Scale',
-    description: '혼자 쓰던 도구를 공유하면, 그것이 서비스가 됩니다.',
+    title: 'Start Small, Grow Smart',
+    description: '작고 단순하게 시작해서, 검증된 방향으로 성장합니다.',
   },
   {
     number: '04',
     title: 'Automate Everything',
-    description: '반복되는 모든 것은 자동화 대상입니다. 시간은 당신의 자산입니다.',
+    description: '반복되는 모든 것을 자동화하여, 창의적인 일에 집중합니다.',
   },
 ] as const;
 
 export const MANIFESTO = {
   title: 'Mission Statement',
-  quote: '"주말은 개발자의 것이어야 합니다."',
+  quote: '"아이디어는 많지만, 실행은 느리다."',
   content: [
-    '저는 매주 주말을 반납하며 살았습니다.',
-    '배포 스크립트, 모니터링, 긴급 패치...',
-    '이제는 AI가 대신합니다.',
+    '만들고 싶은 것은 넘쳐나는데, 하나를 완성하는데 너무 오래 걸렸습니다.',
+    '기획하고, 개발하고, 배포하고, 운영하고... 혼자 하기엔 벅찼습니다.',
+    '그래서 플랫폼을 만들었습니다. 빠르게 실행할 수 있는.',
   ],
   vision: [
-    '내가 만든 자동화 도구로 내 주말을 되찾았습니다.',
-    '이제 이 도구들을 다른 개발자들과 나눕니다.',
-    '모두가 토요일 오후를 카페에서 보낼 수 있도록.',
+    'AI와 자동화로 반복 작업을 줄였습니다.',
+    '이제 아이디어를 빠르게 실제 서비스로 만들고, 실험하고, 개선합니다.',
+    '작은 시도들이 모여 의미 있는 결과를 만듭니다.',
   ],
-  closing: 'LazySaturday는 단순한 브랜드가 아닙니다. AI 자동화를 통해 개발자의 삶을 바꾸는 움직임입니다. 나 혼자만의 자유가 아닌, 우리 모두의 주말을 위하여.',
+  closing: 'LazySaturday는 개발자가 더 많은 것을 시도할 수 있도록 돕습니다. 빠른 실행과 지속 가능한 운영, 그리고 여유로운 삶. 이 세 가지를 함께 추구합니다.',
 } as const;
 
 export const JOURNEY = {
@@ -107,26 +107,20 @@ export const JOURNEY = {
   stages: [
     {
       phase: 'Phase 1',
-      title: 'Personal Tools',
-      description: '내 주말을 위한 AI 자동화 도구 제작',
+      title: 'Foundation',
+      description: '빠른 개발을 위한 플랫폼 구축 - 아이디어를 실제 서비스로 빠르게 전환',
       status: 'current',
     },
     {
       phase: 'Phase 2',
-      title: 'Open Source',
-      description: '유용한 도구들을 오픈소스로 공개',
+      title: 'Multiple Services',
+      description: '다양한 서비스 실험과 운영 - 작은 시도들을 통한 학습과 성장',
       status: 'planned',
     },
     {
       phase: 'Phase 3',
-      title: 'SaaS Platform',
-      description: '누구나 사용할 수 있는 서비스화',
-      status: 'planned',
-    },
-    {
-      phase: 'Phase 4',
-      title: 'Developer Community',
-      description: '자유로운 주말을 즐기는 개발자 커뮤니티',
+      title: 'Sustainable Growth',
+      description: '가치 있는 서비스에 집중하고, 지속 가능하게 확장',
       status: 'vision',
     },
   ],
@@ -134,24 +128,24 @@ export const JOURNEY = {
 
 export const STATS = [
   {
-    number: '100+',
-    label: 'Hours Saved',
-    description: '자동화로 절약한 시간',
+    number: '2일',
+    label: 'Per Service',
+    description: '하나의 서비스 개발 주기',
   },
   {
     number: '24/7',
-    label: 'AI Working',
-    description: '쉬지 않는 AI 어시스턴트',
+    label: 'Automated',
+    description: '자동화된 배포 및 운영',
   },
   {
     number: '∞',
-    label: 'Possibilities',
-    description: '무한한 자동화 가능성',
+    label: 'Revenue Streams',
+    description: '무한한 수익 채널 가능성',
   },
   {
-    number: '1',
-    label: 'Saturday',
-    description: '온전한 주말 하루',
+    number: '10+',
+    label: 'Services/Month',
+    description: '한 달에 런칭 가능한 서비스',
   },
 ] as const;
 

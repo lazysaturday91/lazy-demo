@@ -34,7 +34,7 @@ export function JourneySection() {
             </span>
           </h2>
           <p className="brand-body text-lg md:text-xl text-[#94a3b8] max-w-3xl mx-auto">
-            혼자 쓰던 도구에서 모두를 위한 플랫폼으로
+            빠른 실행에서 지속 가능한 비즈니스 제국으로
           </p>
         </div>
 
@@ -123,8 +123,8 @@ export function JourneySection() {
               이 여정은 이제 막 시작되었습니다.
             </p>
             <p className="brand-body text-lg md:text-xl text-[#94a3b8] leading-relaxed">
-              함께 주말을 되찾고 싶은 개발자라면,<br />
-              <span className="text-[#00c896] font-semibold">당신도 이 움직임의 일부</span>가 될 수 있습니다.
+              빠른 실행과 지속적인 수익화,<br />
+              <span className="text-[#00c896] font-semibold">작은 서비스들이 모여 거대한 비즈니스</span>가 됩니다.
             </p>
           </div>
         </div>

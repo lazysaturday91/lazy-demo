@@ -83,16 +83,16 @@ export function VisionSection() {
         <div className="mt-20 text-center">
           <div className="inline-block glass-card-strong px-8 py-6 max-w-3xl">
             <p className="brand-body text-lg md:text-xl text-white/90 leading-relaxed mb-6">
-              <span className="text-[#00c896] font-semibold">나 혼자 쓰던 자동화 스크립트</span>가 누군가의 주말을 지켜줄 수 있다면,<br />
-              그것이 바로 <span className="text-[#00ffb3] font-semibold">LazySaturday</span>의 존재 이유입니다.
+              <span className="text-[#00c896] font-semibold">하나의 플랫폼</span>으로 무한한 서비스를 만들고,<br />
+              그것이 바로 <span className="text-[#00ffb3] font-semibold">LazySaturday</span>의 비즈니스 모델입니다.
             </p>
 
             <div className="flex items-center justify-center gap-3">
               <div className="px-6 py-3 rounded-lg bg-gradient-to-r from-[#00c896] to-[#06b6d4] text-white font-semibold hover:scale-105 transition-transform cursor-pointer">
-                Join the Movement
+                Start Building
               </div>
               <div className="px-6 py-3 rounded-lg border-2 border-[#00c896] text-[#00c896] font-semibold hover:bg-[#00c896]/10 transition-colors cursor-pointer">
-                Explore Tools
+                View Services
               </div>
             </div>
           </div>
