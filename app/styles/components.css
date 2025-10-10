@@ -1,0 +1,229 @@
+/**
+ * Component Styles
+ * Reusable component patterns for LazySaturday
+ */
+
+/* ============================================
+   Cards & Panels
+   ============================================ */
+
+.brand-card {
+  background: var(--white);
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+}
+
+.brand-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.manifesto-card {
+  background: var(--primary);
+  color: var(--background);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.manifesto-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--highlight));
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.brand-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 14px 28px;
+  background: var(--primary);
+  color: var(--background);
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.brand-button:hover {
+  background: var(--accent);
+  transform: translateX(4px);
+}
+
+.brand-button-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.brand-button-outline:hover {
+  background: var(--primary);
+  color: var(--background);
+}
+
+/* ============================================
+   Philosophy Blocks
+   ============================================ */
+
+.philosophy-block {
+  position: relative;
+  padding: var(--space-md);
+  border-left: 4px solid var(--accent);
+  transition: all var(--transition-slow);
+  overflow: hidden;
+}
+
+.philosophy-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 200, 150, 0.05), transparent);
+  transition: left var(--transition-slow);
+}
+
+.philosophy-block:hover::before {
+  left: 100%;
+}
+
+.philosophy-block:hover {
+  background: rgba(0, 200, 150, 0.03);
+  padding-left: var(--space-lg);
+  transform: translateX(4px);
+  box-shadow: -4px 0 0 0 var(--accent);
+}
+
+.philosophy-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-sm);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy-block:hover .philosophy-number {
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 200, 150, 0.3);
+}
+
+.philosophy-number::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.philosophy-block:hover .philosophy-number::after {
+  opacity: 1;
+}
+
+/* ============================================
+   Tags
+   ============================================ */
+
+.brand-tag {
+  display: inline-flex;
+  padding: 6px 12px;
+  background: rgba(0, 200, 150, 0.1);
+  color: var(--accent);
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 200, 150, 0.2);
+}
+
+/* ============================================
+   Stats
+   ============================================ */
+
+.stat-number {
+  font-family: var(--font-headline);
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--space-xs);
+}
+
+/* ============================================
+   Loop Indicator
+   ============================================ */
+
+.loop-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-full);
+  position: relative;
+}
+
+.loop-indicator::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+}
+
+/* ============================================
+   Hover Effects
+   ============================================ */
+
+.hover-lift {
+  transition: transform var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.hover-accent {
+  transition: color var(--transition-base);
+}
+
+.hover-accent:hover {
+  color: var(--accent);
+}

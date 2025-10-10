@@ -1,0 +1,213 @@
+/**
+ * Background Effects
+ * Routine-themed visual elements
+ */
+
+/* ============================================
+   Section Backgrounds
+   ============================================ */
+
+.section-midnight {
+  background: linear-gradient(180deg, #0a0f1e 0%, #0d1321 50%, #101624 100%);
+  position: relative;
+}
+
+.section-dawn {
+  background: linear-gradient(180deg, #101624 0%, #141b2a 50%, #18202f 100%);
+  position: relative;
+}
+
+.section-morning {
+  background: linear-gradient(180deg, #18202f 0%, #1c2535 50%, #1f293a 100%);
+  position: relative;
+}
+
+.section-bright {
+  background: linear-gradient(180deg, #1f293a 0%, #222d40 50%, #253145 100%);
+  position: relative;
+}
+
+.section-quote {
+  background: linear-gradient(180deg, #253145 0%, #1c2535 100%);
+  position: relative;
+}
+
+/* ============================================
+   Grid Background - Routine & Structure
+   ============================================ */
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0, 200, 150, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 150, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: grid-breathe 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ============================================
+   Loop Lines - Repetition Symbol
+   ============================================ */
+
+.loop-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: var(--z-base);
+}
+
+.loop-line {
+  position: absolute;
+  background: var(--accent);
+  opacity: 0.08;
+}
+
+.loop-line-h1 {
+  width: 300px;
+  height: 2px;
+  top: 15%;
+  left: -300px;
+  animation: loop-flow-h 20s linear infinite;
+}
+
+.loop-line-h2 {
+  width: 200px;
+  height: 1px;
+  top: 45%;
+  right: -200px;
+  animation: loop-flow-h-reverse 25s linear infinite;
+}
+
+.loop-line-h3 {
+  width: 250px;
+  height: 1px;
+  bottom: 25%;
+  left: -250px;
+  animation: loop-flow-h 30s linear infinite;
+}
+
+.loop-line-v1 {
+  width: 1px;
+  height: 200px;
+  top: -200px;
+  left: 20%;
+  animation: loop-flow-v 18s linear infinite;
+}
+
+.loop-line-v2 {
+  width: 1px;
+  height: 150px;
+  bottom: -150px;
+  right: 30%;
+  animation: loop-flow-v-reverse 22s linear infinite;
+}
+
+/* ============================================
+   Floating Accent Dots - System Rhythm
+   ============================================ */
+
+.floating-dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: var(--z-floating);
+}
+
+.floating-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+  opacity: 0;
+  box-shadow: 0 0 10px rgba(0, 200, 150, 0.3);
+}
+
+.dot-1 {
+  top: 20%;
+  left: 15%;
+  animation: float-gentle 15s ease-in-out infinite;
+}
+
+.dot-2 {
+  top: 60%;
+  right: 20%;
+  animation: float-gentle 18s ease-in-out infinite 3s;
+}
+
+.dot-3 {
+  bottom: 30%;
+  left: 25%;
+  animation: float-gentle 20s ease-in-out infinite 6s;
+}
+
+.dot-4 {
+  top: 40%;
+  right: 35%;
+  animation: float-gentle 22s ease-in-out infinite 9s;
+}
+
+.dot-5 {
+  bottom: 15%;
+  right: 15%;
+  animation: float-gentle 17s ease-in-out infinite 12s;
+}
+
+/* ============================================
+   Routine Pulse Rings - Continuous Loop Symbol
+   ============================================ */
+
+.routine-rings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: var(--z-base);
+}
+
+.routine-ring {
+  position: absolute;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-full);
+  opacity: 0;
+}
+
+.ring-1 {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+  animation: pulse-expand 12s ease-out infinite;
+}
+
+.ring-2 {
+  width: 200px;
+  height: 200px;
+  top: 20%;
+  right: 10%;
+  margin-top: -100px;
+  margin-right: -100px;
+  animation: pulse-expand 15s ease-out infinite 5s;
+}
+
+.ring-3 {
+  width: 250px;
+  height: 250px;
+  bottom: 15%;
+  left: 15%;
+  margin-bottom: -125px;
+  margin-left: -125px;
+  animation: pulse-expand 18s ease-out infinite 10s;
+}

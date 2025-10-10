@@ -1,0 +1,76 @@
+/**
+ * CSS Variables - Design System
+ * Based on LazySaturday Brand Identity
+ */
+
+@layer base {
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+  }
+
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+  }
+
+  :root {
+    /* Brand Colors */
+    --primary: #1a1a1a;
+    --accent: #00c896;
+    --background: #f5f5f4;
+    --highlight: #ffd45e;
+    --neutral: #5f5f5f;
+    --white: #ffffff;
+
+    /* Midnight Theme Colors */
+    --midnight-dark: #0a0f1e;
+    --midnight-blue: #1a2740;
+    --midnight-lighter: #2a3546;
+    --dawn-blue: #344155;
+    --morning-gray: #4a5568;
+    --light-slate: #64748b;
+
+    /* Typography */
+    --font-logo: 'Space Grotesk', sans-serif;
+    --font-headline: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-code: 'JetBrains Mono', monospace;
+
+    /* Spacing System - 8px base */
+    --space-xs: 0.5rem;   /* 8px */
+    --space-sm: 1rem;     /* 16px */
+    --space-md: 1.5rem;   /* 24px */
+    --space-lg: 2rem;     /* 32px */
+    --space-xl: 3rem;     /* 48px */
+    --space-2xl: 4rem;    /* 64px */
+    --space-3xl: 6rem;    /* 96px */
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-full: 50%;
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 20px rgba(0, 200, 150, 0.08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+    /* Z-index layers */
+    --z-base: 0;
+    --z-floating: 1;
+    --z-overlay: 10;
+    --z-modal: 100;
+  }
+}
