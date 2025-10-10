@@ -1,0 +1,138 @@
+/**
+ * Typography System
+ * Based on LazySaturday Brand Identity
+ */
+
+/* ============================================
+   Brand Typography Classes
+   ============================================ */
+
+.brand-logo {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.brand-headline {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.brand-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.brand-code {
+  font-family: var(--font-code);
+  font-weight: 400;
+}
+
+/* ============================================
+   Text Sizes
+   ============================================ */
+
+.text-display {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.text-h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.text-h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.3;
+}
+
+.text-h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.4;
+}
+
+.text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.text-caption {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   Quote Styles
+   ============================================ */
+
+.brand-quote {
+  font-family: var(--font-headline);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+  padding-left: var(--space-lg);
+}
+
+.brand-quote::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -0.25em;
+  font-size: 4em;
+  color: var(--accent);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+/* ============================================
+   Accent Line Typography
+   ============================================ */
+
+.accent-line {
+  position: relative;
+  padding-left: var(--space-md);
+}
+
+.accent-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+}
+
+.highlight-line {
+  position: relative;
+  padding-left: var(--space-md);
+}
+
+.highlight-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 100%;
+  background: var(--highlight);
+  border-radius: var(--radius-sm);
+}
